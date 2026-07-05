@@ -1746,7 +1746,16 @@
 										>
 											<PlusAlt className="size-5.5" />
 										</button>
-									</InputMenu>
+									</InputMenu> 
+<div class="max-w-[9rem] shrink-0 mx-0.5">
+  <Selector
+    id="messagebar"
+    placeholder={$i18n.t('Select a model')}
+    items={$models.map((model) => ({ value: model.id, label: model.name, model: model }))}
+    bind:value={selectedModels[0]}
+    triggerClassName="text-xs"
+  />
+</div>
 
 									{#if showWebSearchButton || showImageGenerationButton || showCodeInterpreterButton || showToolsButton || showSkillsButton || (toggleFilters && toggleFilters.length > 0)}
 										<div
